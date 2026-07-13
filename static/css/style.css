@@ -277,7 +277,7 @@ li { margin-bottom: .45em; }
   border-radius: 3px;
   box-shadow: var(--shadow);
   transform: rotate(-2.2deg);
-  width: 74%;
+  width: 62%;
   margin: 0 auto;
   position: relative;
   transition: transform .3s ease;
@@ -286,10 +286,10 @@ li { margin-bottom: .45em; }
 .polaroid img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3.4;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: 50% 22%;
-  filter: saturate(.85) contrast(1.03) sepia(.12);
+  object-position: 50% 40%;
+  filter: saturate(.94) contrast(1.02) sepia(.05);
 }
 .polaroid figcaption {
   font-family: var(--hand);
@@ -310,7 +310,7 @@ li { margin-bottom: .45em; }
   backdrop-filter: blur(1px);
 }
 .tape.tl { top: -12px; left: -16px; transform: rotate(-28deg); }
-.tape.br { bottom: 6px; right: -20px; transform: rotate(-24deg); }
+.tape.br { bottom: -9px; right: -24px; transform: rotate(-24deg); }
 
 /* ---------- Sticky note ---------- */
 .note {
