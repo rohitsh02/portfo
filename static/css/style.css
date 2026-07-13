@@ -273,7 +273,7 @@ li { margin-bottom: .45em; }
 .photo-stack { position: relative; padding: 10px 0 104px; }
 .polaroid {
   background: #ece3d2;
-  padding: 12px 12px 0;
+  padding: 12px 12px 42px;
   border-radius: 3px;
   box-shadow: var(--shadow);
   transform: rotate(-2.2deg);
