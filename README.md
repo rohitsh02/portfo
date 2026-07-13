@@ -13,7 +13,7 @@ hand-crafted dark theme and a pixel-art bot that greets visitors. Deployed on Ve
 ## Stack
 
 | Layer | What's used |
-|---|---|
+| --- | --- |
 | Backend | Flask 3 (Jinja2 templates) |
 | Frontend | Hand-written CSS + vanilla JS — no framework, no build step |
 | Fonts | JetBrains Mono, Inter, Caveat (Google Fonts) |
@@ -24,7 +24,7 @@ No bundler, no `node_modules`. The CSS and JS are served as-is.
 
 ## Project structure
 
-```
+```text
 ├── api/
 │   └── index.py          # Vercel serverless entrypoint (exposes the Flask `app`)
 ├── server.py             # Flask routes + contact-form handling
@@ -67,7 +67,7 @@ them. In production the form sends an email via Resend instead.
 Set one environment variable in **Vercel → Settings → Environment Variables**:
 
 | Variable | Required | Default |
-|---|---|---|
+| --- | --- | --- |
 | `RESEND_API_KEY` | yes | — |
 | `CONTACT_TO` | no | `rohitshende020@gmail.com` |
 | `CONTACT_FROM` | no | `Portfolio <onboarding@resend.dev>` |
