@@ -10,7 +10,7 @@ The site has no server-side behaviour, so `build.py` renders it to static HTML a
 GitHub Actions publishes that to GitHub Pages on every push to `main`. The Flask app
 is kept for local preview (and can still be deployed to Vercel — see below).
 
-**Live:** _add your Pages URL here once deployed_
+**Live:** <https://rohitsh02.github.io/portfo/>
 
 ---
 
@@ -89,6 +89,9 @@ environment variables are needed.
 - There is no contact form. The site is fully static, so the contact page lists an
   email, phone number and social links instead. `database.csv` holds submissions from
   the old form and is no longer read or written.
-- `CNAME` (`rohitshende.ml`) is a leftover from an earlier GitHub Pages setup. Delete
-  it or replace it with a domain you actually own — otherwise Pages will try to serve
-  the site from that hostname.
+- The repo used to contain a `CNAME` pointing at `rohitshende.ml`, a free domain the
+  registry reclaimed. It made Pages publish to that unresolvable hostname, so deploys
+  "succeeded" while the site 404'd. It has been removed. If you add a custom domain
+  later, put a `CNAME` file in `dist/` via `build.py` — not just in the repo root.
+- To serve from `rohitsh02.github.io` with no subpath, rename the repo to
+  `rohitsh02.github.io`. All links are relative, so nothing else needs to change.
