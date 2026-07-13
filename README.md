@@ -4,9 +4,13 @@ Personal portfolio site for **Rohit Shende** — AI engineer working on LLM agen
 pipelines and the backend infrastructure that keeps them running in production.
 
 A small Flask app rendering five pages from a shared Jinja template, with a
-hand-crafted dark theme and a pixel-art bot that greets visitors. Deployed on Vercel.
+hand-crafted dark theme and a pixel-art bot that greets visitors.
 
-**Live:** _add your vercel.app URL here once deployed_
+The site has no server-side behaviour, so `build.py` renders it to static HTML and
+GitHub Actions publishes that to GitHub Pages on every push to `main`. The Flask app
+is kept for local preview (and can still be deployed to Vercel — see below).
+
+**Live:** _add your Pages URL here once deployed_
 
 ---
 
@@ -14,35 +18,38 @@ hand-crafted dark theme and a pixel-art bot that greets visitors. Deployed on Ve
 
 | Layer | What's used |
 | --- | --- |
-| Backend | Flask 3 (Jinja2 templates) |
-| Frontend | Hand-written CSS + vanilla JS — no framework, no build step |
+| Templating | Flask 3 + Jinja2 (build-time only) |
+| Frontend | Hand-written CSS + vanilla JS — no framework, no bundler |
 | Fonts | JetBrains Mono, Inter, Caveat (Google Fonts) |
-| Contact form | [Resend](https://resend.com) email delivery |
-| Hosting | Vercel (Python serverless) |
+| Hosting | GitHub Pages (static), optionally Vercel |
 
-No bundler, no `node_modules`. The CSS and JS are served as-is.
+No `node_modules`. The CSS and JS are served as-is.
 
 ## Project structure
 
 ```text
-├── api/
-│   └── index.py          # Vercel serverless entrypoint (exposes the Flask `app`)
-├── server.py             # Flask routes + contact-form handling
-├── vercel.json           # Static files → CDN, everything else → Flask
+├── build.py              # Renders the templates to static HTML in dist/
+├── server.py             # Flask routes — local preview and the build's source
+├── .github/workflows/
+│   └── pages.yml         # Builds and publishes dist/ to GitHub Pages
+├── api/index.py          # Vercel entrypoint (optional — see Deploying)
+├── vercel.json           # Vercel routing (optional)
 ├── requirements.txt
 ├── templates/
 │   ├── base.html         # Shared layout: nav, footer, the pixel bot
 │   ├── index.html        # Home
 │   ├── works.html        # Projects
 │   ├── about.html        # Bio, skills, experience, education
-│   ├── contact.html      # Contact form
-│   ├── blog.html         # Links to Medium posts
-│   └── thankyou.html     # Post-submit confirmation (and failure state)
+│   ├── contact.html      # Contact details
+│   └── blog.html         # Links to Medium posts
 └── static/
     ├── css/style.css
     ├── js/main.js        # Nav, typing effect, scroll reveal, bot behaviour
     └── assets/           # Images, favicon, resume PDF
 ```
+
+All links in the templates are relative, so the built site works both at a domain
+root and under a `/repo-name` subpath.
 
 ## Running locally
 
@@ -51,45 +58,37 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-flask --app server run --port 5000
+flask --app server run --port 5000 --debug
 ```
 
-Then open <http://127.0.0.1:5000>.
+Then open <http://127.0.0.1:5000>. Edits to templates or CSS reload on refresh.
 
-Locally the contact form appends submissions to `database.csv`, so you can test it
-without an email provider. That fallback is **local only** — see below.
+## Building the static site
 
-## Contact form
-
-Vercel's filesystem is ephemeral, so writing submissions to disk would silently lose
-them. In production the form sends an email via Resend instead.
-
-Set one environment variable in **Vercel → Settings → Environment Variables**:
-
-| Variable | Required | Default |
-| --- | --- | --- |
-| `RESEND_API_KEY` | yes | — |
-| `CONTACT_TO` | no | `rohitshende020@gmail.com` |
-| `CONTACT_FROM` | no | `Portfolio <onboarding@resend.dev>` |
-
-`onboarding@resend.dev` requires no domain verification, but Resend will only deliver
-from it to your own account address. Once you verify a custom domain, override
-`CONTACT_FROM`.
-
-If the key is missing or delivery fails, the site does **not** pretend the message
-went through — it shows an error and points the visitor at the email address directly.
+```bash
+python build.py          # renders every page into dist/
+cd dist && python3 -m http.server 5100   # preview exactly what Pages will serve
+```
 
 ## Deploying
 
-The repo is wired for Vercel; `vercel.json` handles routing.
+### GitHub Pages (primary)
 
-1. Import the repo at [vercel.com/new](https://vercel.com/new). Framework preset: **Other**.
-2. Add `RESEND_API_KEY` under Settings → Environment Variables.
-3. Redeploy so the running deployment picks up the variable.
+`.github/workflows/pages.yml` builds and deploys on every push to `main`. Enable it
+once under **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-Pushes to `main` deploy automatically after that.
+### Vercel (optional)
+
+The Flask app can also run as a Vercel serverless function — `vercel.json` and
+`api/index.py` are still in the repo. Import the project at
+[vercel.com/new](https://vercel.com/new) with framework preset **Other**. No
+environment variables are needed.
 
 ## Notes
 
-- `CNAME` (`rohitshende.ml`) is a leftover from GitHub Pages and is unused on Vercel.
-- `database.csv` holds historical local submissions and is not written to in production.
+- There is no contact form. The site is fully static, so the contact page lists an
+  email, phone number and social links instead. `database.csv` holds submissions from
+  the old form and is no longer read or written.
+- `CNAME` (`rohitshende.ml`) is a leftover from an earlier GitHub Pages setup. Delete
+  it or replace it with a domain you actually own — otherwise Pages will try to serve
+  the site from that hostname.

@@ -4,4 +4,5 @@ __pycache__/
 venv/
 .vercel
 .playwright-mcp/
+dist/
 .DS_Store

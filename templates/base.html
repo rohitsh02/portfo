@@ -7,15 +7,15 @@
   <meta name="description" content="{% block description %}Rohit Shende — AI engineer in Nagpur. I build LLM agents, RAG pipelines and the backend plumbing that keeps them running in production.{% endblock %}">
   <meta name="author" content="Rohit Shende">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-icon-180x180.png">
-  <link rel="icon" href="/static/assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link rel="icon" href="./static/assets/favicon.ico">
 
   <title>{% block title %}Rohit Shende — AI Engineer{% endblock %}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@500;600;700&amp;display=swap" rel="stylesheet">
-  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="./static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,18 +24,18 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="logo">rohit<span class="accent">@</span>shende<span class="cursor">_</span></a>
+      <a href="./index.html" class="logo">rohit<span class="accent">@</span>shende<span class="cursor">_</span></a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="site-nav" id="siteNav">
-        <a href="/" class="{{ 'active' if active == 'home' else '' }}">Home</a>
-        <a href="/works.html" class="{{ 'active' if active == 'works' else '' }}">Works</a>
-        <a href="/about.html" class="{{ 'active' if active == 'about' else '' }}">About</a>
-        <a href="/contact.html" class="{{ 'active' if active == 'contact' else '' }}">Contact</a>
-        <a href="/blog.html" class="{{ 'active' if active == 'blog' else '' }}">Blog</a>
+        <a href="./index.html" class="{{ 'active' if active == 'home' else '' }}">Home</a>
+        <a href="./works.html" class="{{ 'active' if active == 'works' else '' }}">Works</a>
+        <a href="./about.html" class="{{ 'active' if active == 'about' else '' }}">About</a>
+        <a href="./contact.html" class="{{ 'active' if active == 'contact' else '' }}">Contact</a>
+        <a href="./blog.html" class="{{ 'active' if active == 'blog' else '' }}">Blog</a>
 
         <div class="nav-social">
           <a href="https://www.linkedin.com/in/rohit-shende-ml/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -115,7 +115,7 @@
     </svg>
   </div>
 
-  <script src="/static/js/main.js"></script>
+  <script src="./static/js/main.js"></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
