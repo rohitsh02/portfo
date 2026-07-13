@@ -1,90 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}Rohit Shende — AI Engineer{% endblock %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+{% block content %}
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-  <link href="./static/assets/favicon.ico" rel="icon">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">hey there 👋</span>
+      <h1>
+        I'm <span class="scribble">Rohit<svg viewBox="0 0 220 14" preserveAspectRatio="none"><path d="M2 9c34-6 62 2 96-3 30-4 58 5 120-2"/></svg></span>.
+      </h1>
 
-  <title>Rohit Shende</title>  
+      <div class="hero-role">
+        <span id="typedRole" data-roles='["I build LLM agents.","I ship FastAPI services.","I make Raspberry Pis talk to the grid.","I automate the boring parts."]'></span><span class="cur">▊</span>
+      </div>
 
-<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+      <p class="lede">
+        AI engineer in Nagpur. For the last three years I've been building LLM agents, RAG pipelines
+        and the deeply unglamorous backend plumbing that keeps them alive in production — mostly in
+        energy, where <em>a wrong number costs somebody real money</em>.
+      </p>
 
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <div class="btn-row">
+        <a href="/works.html" class="btn btn-primary">See what I've built</a>
+        <a href="/contact.html" class="btn btn-ghost">Say hello</a>
+      </div>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Works</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-          <li class="active"><a href="./blog.html" title="">05 : Blog</a>
-        </ul>
-          <!-- Added social media and email links -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.linkedin.com/in/rohit-shende-ml/" title=""><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/rohitshshende0/" title=""><i class="fa fa-github"></i></a></li>
-            <li><a href="mailto:rohitshende020@gmail.com" title=""><i class="fa fa-envelope"></i></a></li>
-          </ul>
-
-
-      </div> 
+      <div class="hero-aside">
+        <svg viewBox="0 0 46 30" aria-hidden="true">
+          <path d="M43 3C36 16 24 24 5 25"/>
+          <path d="M5 25l9-5M5 25l6 7"/>
+        </svg>
+        <span class="hand-sm">resume's on the About page, if that's why you're here</span>
+      </div>
     </div>
-  </nav>
-</header>
-<!-- Add your site or app content here -->
-  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/space.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content">
-              <h1>Hello,<br>
-                <span id="typed-strings">
-                  <span>I'm Rohit Shende</span>
-                  <span>Data Science & Machine Learning Engineer</span>
-                  <span>Principal Data Science Engineer at GridInsight</span>
-                </span>
-                <span id="typed"></span>
-              </h1>
-            </div>
-          </div>
-        </div>
+
+    <div class="photo-stack reveal">
+      <figure class="polaroid">
+        <span class="tape tl"></span>
+        <img src="/static/assets/images/profile.jpg" alt="Rohit Shende">
+        <figcaption>me, somewhere near Nagpur</figcaption>
+        <span class="tape br"></span>
+      </figure>
+
+      <div class="note note-float">
+        <div class="note-label">currently</div>
+        <div class="note-body">building agents @ Grid Insight</div>
       </div>
     </div>
   </div>
+</section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-     movingBackgroundImage();
-  });
-</script>
+<section class="section">
+  <div class="container">
+    <div class="cards-row reveal">
+      <div class="index-card">
+        <div class="num">3 yrs</div>
+        <div class="label">shipping AI to production, not to a notebook</div>
+      </div>
+      <div class="index-card">
+        <div class="num">10+</div>
+        <div class="label">FastAPI services running on Cloud Run</div>
+      </div>
+      <div class="index-card">
+        <div class="num">500+</div>
+        <div class="label">electricity bills parsed every month, zero humans</div>
+      </div>
+      <div class="index-card">
+        <div class="num">~80%</div>
+        <div class="label">of the manual ops work, automated away with n8n</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">what I actually do</span>
+      <h2>Four things, mostly</h2>
+      <p>Anyone can get an LLM to say something clever once. The hard part is the other 99% — keeping
+        it correct, cheap and awake at 3am.</p>
+    </div>
 
-<script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+    <div class="grid-4 stagger">
+      <div class="card reveal">
+        <div class="card-num">01</div>
+        <h3>Agents &amp; LLM systems</h3>
+        <p>LangGraph state machines with tool-calling, memory and routing. Schema-enforced outputs, so
+          the thing can't hand you garbage.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">02</div>
+        <h3>Backends that hold up</h3>
+        <p>FastAPI in Docker on GCP Cloud Run. Rate limiting, App Check, secrets where they belong.
+          No breaches so far — I'd like to keep it that way.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">03</div>
+        <h3>Things in the real world</h3>
+        <p>Raspberry Pis reading meters over Modbus/RS485, shouting over MQTT, landing in TimescaleDB.
+          My electrical engineering degree finally paid off.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">04</div>
+        <h3>Killing the boring work</h3>
+        <p>n8n workflows wiring Gmail, WhatsApp, SendGrid and MongoDB together, so nobody has to
+          copy-paste a PDF into a spreadsheet ever again.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-</html>
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">a few things I've built</span>
+      <h2>Shipped, not shelved</h2>
+    </div>
+
+    <div class="grid-3 stagger">
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>AI Energy Advisor</h3>
+        <p>A multi-agent system that answers real tariff questions, sizes solar and hunts down
+          demand-charge savings — grounded on the user's own bills, so it can't just make things up.</p>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">CopilotKit</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>Bill Intelligence</h3>
+        <p>Watches a Gmail inbox, rips data out of Marathi &amp; English bill PDFs, spots the anomalies,
+          then pings you on WhatsApp. 500+ bills a month, nobody touching it.</p>
+        <div class="tag-row">
+          <span class="tag">FastAPI</span><span class="tag">n8n</span><span class="tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>Volt Platform</h3>
+        <p>A full energy SaaS — 10+ analytics APIs, a React dashboard, and an AI tab that writes the
+          commentary a human analyst would have written.</p>
+        <div class="tag-row">
+          <span class="tag">FastAPI</span><span class="tag">Gemini</span><span class="tag">React</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top:44px;">
+      <a href="/works.html" class="btn btn-ghost">All four, in detail &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <div class="cta-band">
+      <span class="eyebrow">still reading?</span>
+      <h2>Let's build something that ships.</h2>
+      <p>I'm open to full-time roles and freelance work — AI engineering, LLM systems, backend
+        infrastructure. I reply to everything.</p>
+      <div class="btn-row">
+        <a href="/contact.html" class="btn btn-primary">Get in touch</a>
+        <a href="mailto:rohitshende020@gmail.com" class="btn btn-ghost">rohitshende020@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

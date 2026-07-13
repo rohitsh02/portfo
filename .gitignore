@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vercel
+.playwright-mcp/
+.DS_Store

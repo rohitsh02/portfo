@@ -1,165 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}About | Rohit Shende{% endblock %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+{% block content %}
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-  <link href="./static/assets/favicon.ico" rel="icon">
+<section class="page-hero">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">about me</span>
+      <h2>I started with <span class="scribble">circuits<svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 8c30-5 58 3 92-2 28-4 54 4 104-1"/></svg></span>, ended up with agents.</h2>
+    </div>
+  </div>
+</section>
 
-  <title>About | Rohit Shende</title>  
+<section class="section" style="padding-top:20px;">
+  <div class="container bio reveal">
+    <p class="bio-lead">I'm an AI engineer based in Nagpur. I've spent the last three years at Grid Insight
+      building LLM-powered systems for the energy sector — agents, RAG pipelines, REST APIs, and all the
+      infrastructure underneath that nobody puts on a slide.</p>
 
-  <link href="./static/main.3f6952e4.css" rel="stylesheet">
-  <style>
-    .col-xs-12.col-md-6 {
-      display: none;
-    }
-    .col-xs-12.col-md-12 {
-      width: 100%;
-    }
-  </style>
-</head>
+    <p>My degree is in Electrical &amp; Electronics Engineering. I did not plan on any of this. I got curious
+      about machine learning somewhere around 2021, taught myself Python properly, and then spent an
+      embarrassing number of nights on ML courses and side projects until the notebooks turned into
+      something people actually paid for.</p>
 
-<body class="">
-  <div id="site-border-left"></div>
-  <div id="site-border-right"></div>
-  <div id="site-border-top"></div>
-  <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
-  <header>
-    <nav class="navbar  navbar-fixed-top navbar-default">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <p>The thing that stuck with me from the electrical side is that a wrong number has consequences. When
+      you're telling someone what their electricity bill should be, or whether a solar install pays for
+      itself, "the model said so" is not an acceptable answer. So most of my work is about the boring,
+      load-bearing parts: schema-enforced LLM outputs, fallback chains, grounding answers in the user's real
+      data, and making sure the whole thing doesn't fall over at 3am.</p>
 
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav ">
-            <li><a href="./index.html" title="">01 : Home</a></li>
-            <li><a href="./works.html" title="">02 : Works</a></li>
-            <li><a href="./about.html" title="">03 : About me</a></li>
-            <li><a href="./contact.html" title="">04 : Contact</a></li>
-            <li class="active"><a href="./blog.html" title="">05 : Blog</a>
+    <p>These days that means LangGraph and Gemini on the agent side, FastAPI and Docker on Cloud Run for the
+      backend, n8n for the glue, and — pleasingly — Raspberry Pis wired into actual meters, which is the
+      closest my degree and my job have ever come to shaking hands.</p>
+  </div>
+</section>
 
-          </ul>
-          <!-- Added social media and email links -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.linkedin.com/in/rohit-shende-ml/" title=""><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/rohitshshende0/" title=""><i class="fa fa-github"></i></a></li>
-            <li><a href="mailto:rohitshende020@gmail.com" title=""><i class="fa fa-envelope"></i></a></li>
-          </ul>
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">the toolbox</span>
+      <h2>What I reach for</h2>
+    </div>
 
-
-        </div> 
+    <div class="reveal">
+      <div class="skill-group">
+        <h4>AI &amp; LLM</h4>
+        <div class="skill-chips">
+          <span class="tag accent">LangGraph</span><span class="tag accent">LangChain</span><span class="tag accent">Gemini</span>
+          <span class="tag accent">OpenAI API</span><span class="tag accent">LLaMA</span><span class="tag accent">CopilotKit</span>
+          <span class="tag accent">Supermemory</span><span class="tag accent">RAG pipelines</span><span class="tag accent">Prompt engineering</span>
+        </div>
       </div>
-    </nav>
-  </header>
-
-  <div class="section-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="section-container-spacer text-center">
-            <h1 class="h2">03 : About me</h1>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h3>Me</h3>
-                  <p>I hail from Nagpur, India and currently work as a Freelance Machine Learning Engineer at Upwork. With a strong background in artificial intelligence, deep learning, and natural language processing, I have been instrumental in developing and deploying end-to-end machine learning solutions.</p>
-                  <p>I completed my Bachelor's degree in Electrical Engineering from Nagpur University in 2021. However, my fascination with machine learning and AI led me to explore new avenues of learning. To further enhance my skills, I joined the Zero to Mastery Academy, where I delved into the world of Python development, machine learning, and data science.</p>
-                  <h3>What I know</h3>
-                  <p>As a result of my relentless curiosity, I have gained practical experience with a wide range of technologies, including:</p>
-                  <ul>
-                    <li>Python</li>
-                    <li>R</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>SQL</li>
-                    <li>Scikit-Learn</li>
-                    <li>Spacy</li>
-                    <li>Pandas</li>
-                    <li>Numpy</li>
-                    <li>Seaborn</li>
-                    <li>Matplotlib</li>
-                    <li>Matlab</li>
-                    <li>PyTorch</li>
-                    <li>OpenCV</li>
-                    <li>Hugging Face</li>
-                    <li>Pydantic</li>
-                    <li>LangChain</li>
-                    <li>Airflow</li>
-                  </ul>
-                  <p>for use with concepts such as:</p>
-                  <ul>
-                    <li>Natural Language Processing</li>
-                    <li>Machine Learning</li>
-                    <li>Data Analytics</li>
-                    <li>Data Visualization</li>
-                    <li>Database Systems & Information Modelling</li>
-                    <li>Software Engineering</li>
-                    <li>Api Development</li>
-                    <li>and more!</li>
-                  </ul>
-                  <p>Right now, I prefer using Python for Machine Learning, NLP, and Deep Learning work.</p>
-                  <h3>Certificates I've completed:</h3>
-                  <p>To feed my hunger for learning, I take online courses for areas in AI and Software Engineering that I find interesting and work independently on projects in my free time. Some of them include:</p>
-                  <ul>
-                    <li>Complete Python Developer in 2023 - zero to mastery</li>
-                    <li>Complete Machine Learning and Data Science - zero to mastery</li>
-                    <li>PyTorch for Deep Learning - zero to mastery</li>
-                    <li>Applications of Machine Learning in Urban Studies - ISRO & IIRS</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
+      <div class="skill-group">
+        <h4>Python</h4>
+        <div class="skill-chips">
+          <span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">Pydantic</span>
+          <span class="tag">Asyncio</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+          <span class="tag">Scikit-learn</span><span class="tag">PyTorch</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>JavaScript</h4>
+        <div class="skill-chips">
+          <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">React</span>
+          <span class="tag">REST APIs</span><span class="tag">Async/await</span><span class="tag">npm</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>IoT &amp; embedded</h4>
+        <div class="skill-chips">
+          <span class="tag">MQTT</span><span class="tag">WebSockets</span><span class="tag">Modbus</span>
+          <span class="tag">RS485</span><span class="tag">Raspberry Pi</span><span class="tag">TimescaleDB</span>
+          <span class="tag">Real-time telemetry</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Cloud &amp; MLOps</h4>
+        <div class="skill-chips">
+          <span class="tag">GCP Cloud Run</span><span class="tag">Docker</span><span class="tag">Artifact Registry</span>
+          <span class="tag">Secret Manager</span><span class="tag">Cloud Armor</span><span class="tag">Firebase</span><span class="tag">App Check</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Databases</h4>
+        <div class="skill-chips">
+          <span class="tag">MongoDB Atlas</span><span class="tag">Firestore</span><span class="tag">PostgreSQL</span>
+          <span class="tag">SQLAlchemy</span><span class="tag">Mongoose</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Automation</h4>
+        <div class="skill-chips">
+          <span class="tag">n8n</span><span class="tag">SendGrid</span><span class="tag">WhatsApp Business API</span>
+          <span class="tag">Razorpay</span><span class="tag">Webhooks</span><span class="tag">Git</span>
         </div>
       </div>
     </div>
   </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">where I've been</span>
+      <h2>Experience</h2>
+    </div>
 
-  <footer class="footer-container text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p>© ROHIT SHENDE | Website created with <a href="http://www.mashup-template.com/" title="Create website with free HTML template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+    <div class="timeline-item reveal">
+      <div class="timeline-head">
+        <h3>AI Engineer &amp; Python Developer</h3>
+        <span class="timeline-date">Oct 2023 → now</span>
+      </div>
+      <div class="timeline-org">Grid Insight Technologies Pvt. Ltd. &middot; Nagpur</div>
+      <ul>
+        <li>Architected a LangGraph + Gemini multi-agent system — tool-calling, conditional routing, persistent
+          memory via Supermemory — deployed on Cloud Run behind a CopilotKit UI, giving users live energy advice.</li>
+        <li>Built the whole prompt engineering layer: system prompts, few-shot examples, Pydantic schema
+          enforcement, LLM fallback chains. Unstructured outputs in production went to essentially zero.</li>
+        <li>Shipped 10+ FastAPI microservices in Docker on Cloud Run. Hardened with slowapi rate limiting,
+          Firebase App Check and Cloud Armor; secrets in Secret Manager. Zero breaches.</li>
+        <li>Built a RAG-style document pipeline for Marathi &amp; English MSEDCL bill PDFs, feeding structured
+          data downstream — killing manual entry for 5,000+ consumer records a month.</li>
+        <li>Wrote 5+ n8n workflows: Gmail PDF ingestion → AI extraction → MongoDB; WhatsApp delivery; SendGrid
+          campaigns; MongoDB → Google Sheets CRM sync. Cut manual ops time by roughly 80%.</li>
+        <li>Delivered BESS &amp; solar financial modelling APIs with LLM-written commentary, so clients could
+          model ROI with Excel-verified accuracy.</li>
+        <li>Deployed IoT monitoring across energy sites — Raspberry Pis pulling meter, inverter and generation
+          data over Modbus/RS485 and MQTT, streaming via WebSockets into TimescaleDB, with real-time anomaly alerts.</li>
+        <li>Integrated Razorpay with a first-time-user coupon engine, and wrote up production learnings on Medium.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">the paperwork</span>
+      <h2>Education &amp; certifications</h2>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-head">
+        <h3>B.E. — Electrical &amp; Electronics Engineering</h3>
+        <span class="timeline-date">2017 → 2021</span>
+      </div>
+      <div class="timeline-org">Priyadarshini Institute of Engineering &amp; Technology (RTMNU) &middot; Nagpur</div>
+      <ul>
+        <li>ML &amp; Data Science Bootcamp — Zero to Mastery</li>
+        <li>PyTorch for Deep Learning — Zero to Mastery</li>
+        <li>SCADA &amp; PLC programming</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="margin-top:30px;">
+      <div class="skill-group">
+        <h4>Languages I speak</h4>
+        <div class="skill-chips">
+          <span class="tag">English</span><span class="tag">Hindi</span><span class="tag">Marathi</span>
         </div>
       </div>
     </div>
-  </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      navActivePage();
-    });
-  </script>
+    <div class="btn-row reveal" style="margin-top:34px;">
+      <a href="/static/assets/Rohit_Shende_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Grab the resume (PDF)</a>
+      <span class="hand-sm">it's the same story, but in one page and fewer jokes</span>
+    </div>
+  </div>
+</section>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
-
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l =
-    </script>
-    <script type="text/javascript" src="./static/main.70a66962.js"></script>
-</body>
-
-</html>
+{% endblock %}

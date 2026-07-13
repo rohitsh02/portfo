@@ -1,209 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}Works | Rohit Shende{% endblock %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+{% block content %}
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-  <link href="./static/assets/favicon.ico" rel="icon">
-
-  <title>Works | Rohit Shende</title>  
-
-<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
-
-<body class="">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
- <!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Works</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-          <li class="active"><a href="./blog.html" title="">05 : Blog</a>
-
-        </ul>
-          <!-- Added social media and email links -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.linkedin.com/in/rohit-shende-ml/" title=""><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/rohitshshende0/" title=""><i class="fa fa-github"></i></a></li>
-            <li><a href="mailto:rohitshende020@gmail.com" title=""><i class="fa fa-envelope"></i></a></li>
-          </ul>
-
-
-      </div> 
-    </div>
-  </nav>
-</header>
-
-<div class="section-container">
+<section class="page-hero">
   <div class="container">
-    <div class="row">
-      
-      <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
-        <div class="text-center">
-          <h1 class="h2">02 : Works</h1>
-          <p>I bring a strong background in machine learning, adept at developing and deploying comprehensive solutions. With a focus on data pre-processing, advanced model development, and cross-functional collaboration, I consistently exceed objectives, delivering impactful outcomes that optimize operations and tackle complex business challenges.</p>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-     
-      <div id="myCarousel" class="carousel slide projects-carousel">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="row">
-                    <div class="col-sm-4">
-
-                      <a href=" " title="" class="black-image-project-hover">
-                        <img src="./static/assets/images/work01-hover.jpg" alt="" class="img-responsive">
-                      </a>
-                      <div class="card-container card-container-lg">
-                        <h4>001/006</h4>
-                        <h3>🍔👁 Food Vision Big™</h3>
-                        <p> building a powerful food image classification model using CNN.</p>
-                        <a href="https://github.com/rohitshshende0/tf-deep-learning/blob/main/Food_Vision_Big%E2%84%A2.ipynb" title="" class="btn btn-default">Discover</a>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <a href=" " title="" class="black-image-project-hover">
-                        <img src="./static/assets/images/work02-hover.jpg" alt="" class="img-responsive">
-                      </a>
-                      <div class="card-container card-container-lg">
-                        <h4>002/006</h4>
-                        <h3>SkimLit 📄🔥:NLP Project</h3>
-                        <p>NLP model to make reading medical abstracts easier.</p>
-                        <a href="https://github.com/rohitshshende0/NLP_deep_learning/blob/main/SkimLit_nlp_project.ipynb" title="" class="btn btn-default">Discover </a>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <a href=" " title="" class="black-image-project-hover">
-                        <img src="./static/assets/images/work03-hover.jpg" alt="" class="img-responsive">
-                      </a>
-                      <div class="card-container card-container-lg">
-                        <h4>003/006</h4>
-                        <h3>BitPredict 💰📈: Time series forecasting</h3>
-                        <p>series of models in an attempt to predict the price of Bitcoin.</p>
-                        <a href="https://github.com/rohitshshende0/time_series_forecasting/blob/main/BitPredict_Time_series_forecasting.ipynb" title="" class="btn btn-default">Discover</a>
-                      </div>
-                    </div>
-                    
-                </div>
-                <!--/row-->
-            </div>
-            <!--/item-->
-            <div class="item">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <a href=" " class="black-image-project-hover">
-                      <img src="./static/assets/images/work04-hover.jpg" alt="Image" class="img-responsive">
-                    </a>
-                    <div class="card-container">
-                      <h4>004/006</h4>
-                      <h3>Dog Breed identification</h3>
-                      <p> accurately classify images of dogs into their respective breeds using deep learning.</p>
-                      <a href="https://github.com/rohitshshende0/dog-breed-identification/blob/main/dog-vision.ipynb" class="btn btn-default">Discover</a>
-                    </div>
-                  </div>
-                   <div class="col-sm-4">
-                      <a href=" " class="black-image-project-hover">
-                        <img src="./static/assets/images/work05-hover.jpg" alt="Image" class="img-responsive">
-                      </a>
-                      <div class="card-container">
-                        <h4>005/006</h4>
-                        <h3>Bulldozer Price Prediction</h3>
-                        <p>build a regression model that can estimate price of used bulldozers based on various features.</p>
-                        <a href="https://github.com/rohitshshende0/bulldozer-price-prediction-project/blob/main/end-to-end-bulldozer-price-regression.ipynb" class="btn btn-default">Discover</a>
-                      </div>
-                    </div>
-                    
-                    <div class="col-sm-4">
-                      <a href=" " class="black-image-project-hover">
-                        <img src="./static/assets/images/work06-hover.jpg" alt="Image" class="img-responsive">
-                      </a>
-                      <div class="card-container">
-                        <h4>006/006</h4>
-                        <h3>Predicting Heart Disease</h3>
-                        <p>Given clinical parameters about a patient, can we predict wheather or not they have heart disease ?</p>
-                        <a href="https://github.com/rohitshshende0/end-to-end-heart-disease-classification/blob/main/end-to-end-heart-disease-classification.ipynb" class="btn btn-default">Discover</a>
-                      </div>
-                    </div>
-                    
-                </div>
-                <!--/row-->
-            </div>
-            
-            <!--/item-->
-        </div>
-        <!--/carousel-inner--> 
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-     </div>
-
-
-
-    <!--/myCarousel-->
-    </div>
-
-
-
+    <div class="section-head reveal">
+      <span class="eyebrow">works</span>
+      <h2>Things that are <span class="scribble">actually running<svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M2 9c48-6 90 3 140-3 42-5 82 5 156-2"/></svg></span></h2>
+      <p>Four systems in production, serving real users with real money on the line — plus the personal
+        projects from back when I was still figuring it all out.</p>
     </div>
   </div>
-</div>
+</section>
 
-
-<footer class="footer-container text-center">
+<section class="section" style="padding-top:30px;">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p>© ROHIT SHENDE | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+    <div class="grid-2 stagger">
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>AI Energy Advisor</h3>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">CopilotKit</span>
+          <span class="tag">Supermemory</span><span class="tag">Cloud Run</span>
+        </div>
+        <p>A stateful multi-agent system built on LangGraph state machines, with tool-calling and memory
+          that survives between sessions. It fields live tariff questions, sizes solar, and finds
+          demand-charge savings — all grounded on the user's own billing data, so it can't invent numbers.
+          The interesting problem here wasn't the model, it was making it refuse to guess.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>Bill Intelligence Pipeline</h3>
+        <div class="tag-row">
+          <span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">MongoDB Atlas</span>
+          <span class="tag">n8n</span><span class="tag">WhatsApp API</span>
+        </div>
+        <p>Watches a Gmail inbox, pulls the data out of MSEDCL bill PDFs in Marathi <em>and</em> English,
+          runs it through an LLM, flags anything that looks wrong, and pushes it to the consumer on WhatsApp.
+          500+ bills a month with nobody in the loop. Bilingual PDF extraction was, predictably, the part
+          that ate the most time.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>Volt Platform</h3>
+        <div class="tag-row">
+          <span class="tag">FastAPI</span><span class="tag">Gemini</span><span class="tag">MongoDB</span>
+          <span class="tag">GCP</span><span class="tag">React</span>
+        </div>
+        <p>A full energy SaaS: 10+ analytics APIs, a six-tab React dashboard, and LLM-generated commentary
+          on every report — the sentence a human analyst would have written under the chart, without the
+          human. Includes BESS and solar ROI modelling that had to match the finance team's spreadsheet
+          exactly, which it does.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="stamp">live</span>
+        <h3>Grid IoT Monitoring</h3>
+        <div class="tag-row">
+          <span class="tag">MQTT</span><span class="tag">Modbus</span><span class="tag">WebSockets</span>
+          <span class="tag">TimescaleDB</span><span class="tag">Raspberry Pi</span><span class="tag">FastAPI</span>
+        </div>
+        <p>Raspberry Pis sitting in electrical rooms, reading meters and inverters over Modbus/RS485,
+          publishing over MQTT, streaming into a FastAPI server over WebSockets, and landing in TimescaleDB —
+          with anomaly alerts firing to consumers in real time. This is the one where the electrical
+          engineering degree finally earned its keep.</p>
       </div>
     </div>
   </div>
-</footer>
+</section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-</script>
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">from the learning years</span>
+      <h2>Old notebooks</h2>
+      <p>Where I cut my teeth. Nothing production about these, but they're honest about how I got here.</p>
+    </div>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+    <div class="grid-3 stagger">
+      <div class="mini-card reveal">
+        <h4>🍔 Food Vision Big™</h4>
+        <p>A food image classifier built on CNNs — the project that made computer vision click for me.</p>
+        <a href="https://github.com/rohitsh02/tf-deep-learning/blob/main/Food_Vision_Big%E2%84%A2.ipynb" class="project-link" target="_blank" rel="noopener">notebook &rarr;</a>
+      </div>
+      <div class="mini-card reveal">
+        <h4>📄 SkimLit</h4>
+        <p>An NLP model that makes medical abstracts skimmable, by labelling each sentence's role.</p>
+        <a href="https://github.com/rohitsh02/NLP_deep_learning/blob/main/SkimLit_nlp_project.ipynb" class="project-link" target="_blank" rel="noopener">notebook &rarr;</a>
+      </div>
+      <div class="mini-card reveal">
+        <h4>📈 BitPredict</h4>
+        <p>Time-series models trying to forecast Bitcoin. Spoiler: the market remains undefeated.</p>
+        <a href="https://github.com/rohitsh02/time_series_forecasting/blob/main/BitPredict_Time_series_forecasting.ipynb" class="project-link" target="_blank" rel="noopener">notebook &rarr;</a>
+      </div>
+      <div class="mini-card reveal">
+        <h4>🐕 Dog Breed ID</h4>
+        <p>Classifying dogs into breeds with transfer learning. Surprisingly hard, extremely fun.</p>
+        <a href="https://github.com/rohitsh02/dog-breed-identification/blob/main/dog-vision.ipynb" class="project-link" target="_blank" rel="noopener">notebook &rarr;</a>
+      </div>
+      <div class="mini-card reveal">
+        <h4>🚜 Bulldozer Prices</h4>
+        <p>A regression model estimating used bulldozer prices. My first taste of messy real-world tabular data.</p>
+        <a href="https://github.com/rohitsh02/bulldozer-price-prediction-project/blob/main/end-to-end-bulldozer-price-regression.ipynb" class="project-link" target="_blank" rel="noopener">notebook &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-XXXXX-X', 'auto');
-  ga('send', 'pageview');
-</script>
+<section class="section">
+  <div class="container reveal">
+    <div class="cta-band">
+      <h2>Want the long version?</h2>
+      <p>Happy to walk through any of these — the architecture, what broke, and what I'd do differently.</p>
+      <div class="btn-row">
+        <a href="/contact.html" class="btn btn-primary">Ask me about them</a>
+      </div>
+    </div>
+  </div>
+</section>
 
---> <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
-
-</html>
+{% endblock %}
